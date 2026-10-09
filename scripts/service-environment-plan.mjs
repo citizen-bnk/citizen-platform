@@ -10,7 +10,7 @@ export function serviceEnvironmentPlan(config){
   if(!/^prj_[A-Za-z0-9]+$/.test(config.projects[key]))throw Error('Invalid Vercel project');
  }
  const front={NEXT_PUBLIC_HUB_URL:s.hub,NEXT_PUBLIC_WEBSITE_URL:s.website,NEXT_PUBLIC_SIGN_IN_URL:s.hub+'/auth/sign-in',SIGN_IN_URL:s.hub+'/auth/sign-in',PLATFORM_HUB_URL:s.hub,PLATFORM_WEBSITE_URL:s.hub,CORE_API_URL:s.core};
- const env={website:{HUB_URL:s.hub,BANKING_URL:s.banking,APP_URL:s.app,VITE_HUB_URL:s.hub,VITE_BANKING_URL:s.banking,VITE_BANKING_APP_URL:s.app},hub:{NEXT_PUBLIC_WEBSITE_URL:s.website,NEXT_PUBLIC_BANKING_URL:s.banking,BANKING_URL:s.banking,APP_URL:s.app,ACCOUNT_RECOVERY_ORIGIN:s.hub,VITE_WEBSITE_URL:s.website},banking:front,app:front,core:{CITIZEN_HUB_URL:s.hub,PLATFORM_WEBSITE_URL:s.hub,PLATFORM_JWKS_URL:s.hub+'/api/platform/jwks.json'}};
+ const env={website:{HUB_URL:s.hub,BANKING_URL:s.banking,APP_URL:s.app,VITE_HUB_URL:s.hub,VITE_BANKING_URL:s.banking,VITE_BANKING_APP_URL:s.app},hub:{CORE_API_URL:s.core,NEXT_PUBLIC_WEBSITE_URL:s.website,NEXT_PUBLIC_BANKING_URL:s.banking,BANKING_URL:s.banking,APP_URL:s.app,ACCOUNT_RECOVERY_ORIGIN:s.hub,VITE_WEBSITE_URL:s.website},banking:front,app:front,core:{CITIZEN_HUB_URL:s.hub,PLATFORM_WEBSITE_URL:s.hub,PLATFORM_JWKS_URL:s.hub+'/api/platform/jwks.json'}};
  return Object.entries(env).map(([service,values])=>({service,projectId:config.projects[service],teamId:config.teamId,values}));
 }
 if(process.argv[1]===fileURLToPath(import.meta.url)){
