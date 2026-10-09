@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "teamId": "team_4874cbYeUTrRXKGexwn3xpIC",
+  "services": {
+    "website": "https://citizenbank.co.ls",
+    "hub": "https://hub.citizenbank.co.ls",
+    "banking": "https://banking.citizenbank.co.ls",
+    "app": "https://app.citizenbank.co.ls",
+    "core": "https://citizenbankcore-demo.vercel.app"
+  },
+  "projects": {
+    "website": "prj_fwluzWX1cMVDgHxj6OpS2XyvdXGN",
+    "hub": "prj_SjW7mcybwKjkfoeAwubFN908tBOY",
+    "banking": "prj_sUhCP8zSoUNzt5DSnC2dFArGhndN",
+    "app": "prj_52WOOWdjSV5SpzLk1tHTsZjEel35",
+    "core": "prj_m7gqFYUnrFqGwt67hDtUp33nNfLl"
+  }
+}
